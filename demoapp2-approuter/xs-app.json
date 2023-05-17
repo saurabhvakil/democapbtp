@@ -1,0 +1,20 @@
+{
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "/browse/(.*)$",
+      "target": "/browse/$1",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/app/(.*)$",
+      "target": "$1",
+      "localDir": ".",
+      "authenticationType": "xsuaa",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    }
+  ],
+  "welcomeFile": "/demofioriapp"
+}
